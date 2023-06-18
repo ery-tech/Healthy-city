@@ -1,6 +1,6 @@
 <h1> Healthy City</h1>
 <div align="center">
-<img src="https://giphy.com/embed/QtvCDSpaMyzly246Gg" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" alt="sustainable city">
+<img src="https://media.giphy.com/media/QtvCDSpaMyzly246Gg/giphy.gif" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" alt="sustainable city">
 </div>
 
 
