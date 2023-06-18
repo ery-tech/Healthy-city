@@ -42,5 +42,5 @@ The application is divided into 3 main pages: <br>
 
    <h4>Deploy link:     </h4>
   <span> 
-  <img align="left" src="https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7  "> 
+  <img align="left" src="https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7  "> https://ery-tech-healthy-city.netlify.app/
 </span>
