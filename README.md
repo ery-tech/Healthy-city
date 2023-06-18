@@ -11,7 +11,7 @@ The application will be free, people will be able to register and share their id
 
 1)Protect and safeguard the cultural heritage of the city <br>
 2)Protect and safeguard the natural heritage of the city<br>
-3)Support positive, social and environmental bonds between urban areas.  
+3)Support positive, social connections between urban areas.  
 <h4>Structure </h4>
 The application is divided into 3 main pages: <br>
 <ul>
