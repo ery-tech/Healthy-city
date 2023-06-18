@@ -1,6 +1,6 @@
 <h1> Healthy City</h1>
 <div align="center">
-<iframe src="https://giphy.com/embed/MeXpN2RgEmlyRlVdze" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/yorkuniversity-sustainable-yorku-yusdg-MeXpN2RgEmlyRlVdze">via GIPHY</a></p></div>
+<div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe src="https://giphy.com/embed/QtvCDSpaMyzly246Gg" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div></div>
 
 
 <h2> Description </h2>
