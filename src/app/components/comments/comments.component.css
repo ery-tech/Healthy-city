@@ -1,0 +1,24 @@
+
+.register-form{
+  padding-top: 1rem;
+  max-width: 35rem;
+  height: 35rem;
+}
+.register-form p{
+  font-weight: 600;
+
+}
+
+.w-100{
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.mb{
+  margin-bottom: 0.5rem;
+}
+
+
+.title{
+  font-weight: 500;
+  font-size: 17px;
+}

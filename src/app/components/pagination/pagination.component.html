@@ -1,0 +1,11 @@
+<div class="pagination-container container-fluid">
+
+  <div class="row ">
+  <div class="col-md-5 col-sm-3 mx-2 " *ngFor="let page of pages"
+  [ngClass]="{'page-item': true, active: currentPage === page }"
+  (click)="changePage.emit(page)">
+    <span class="pageLink">{{page}}</span>
+</div>
+</div>
+</div>
+

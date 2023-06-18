@@ -1,0 +1,44 @@
+
+<form #registerForm="ngForm" (ngSubmit)="createPost(registerForm)" >
+  <div class="register-form container-fluid" style="color: rgb(53, 53, 161);" >
+  <div><h4>Add a new post</h4></div>
+  <p>Make sure to copy the user id from the profiles page and paste it here.</p>
+  <mat-form-field class="w-100" appearance="outline" >
+    <mat-label>Id</mat-label>
+  <input  matInput ngModel #Id="ngModel"  type="text"
+  name="Id" placeholder="Id" required style="color: rgb(53, 53, 161);" />
+  <mat-error *ngIf="Id.errors?.['required'] && (Id.dirty || Id.touched)">
+    Id is required.
+    </mat-error>
+  </mat-form-field>
+ <mat-form-field class="w-100" appearance="outline" >
+   <mat-label>Title</mat-label>
+ <input  matInput ngModel #title="ngModel"  type="text"
+ name="title" placeholder="Title" required style="color: rgb(53, 53, 161);" />
+ <mat-error *ngIf="title.errors?.['required'] && (title.dirty || title.touched)">
+   Title is required.
+   </mat-error>
+ </mat-form-field>
+ <mat-form-field class="w-100" appearance="outline">
+   <mat-label>Text</mat-label>
+  <textarea matInput ngModel #body="ngModel"  required
+
+    type="text" name="body" placeholder="Text" style="color: rgb(53, 53, 161);">
+  </textarea>
+    <mat-error *ngIf="body.errors?.['required'] && (body.dirty || body.touched)">
+    Text is required.
+     </mat-error>
+
+ </mat-form-field>
+
+
+
+
+  <div >
+   <button mat-raised-button extended color="primary" type="submit" disabled="!registerForm.valid"
+    >Create</button>
+
+  </div>
+ </div>
+  </form>
+

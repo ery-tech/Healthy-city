@@ -1,0 +1,57 @@
+
+<form #registerForm="ngForm" (ngSubmit)="signUp(registerForm)" >
+  <div class="register-form container-fluid" style="color: rgb(53, 53, 161);" >
+  <div class="mt"><h4>Add new user</h4></div>
+ <mat-form-field class="w-100" appearance="outline" >
+   <mat-label>Name</mat-label>
+ <input  matInput ngModel #name="ngModel"  type="text"
+ name="name" placeholder="Name" required style="color: rgb(53, 53, 161);" />
+ <mat-error *ngIf="name.errors?.['required'] && (name.dirty || name.touched)">
+   Name is required.
+   </mat-error>
+ </mat-form-field>
+ <mat-form-field class="w-100" appearance="outline">
+   <mat-label>Email</mat-label>
+  <input  matInput ngModel #email="ngModel"  required
+        email="true"  [email]="validateEmail"
+    type="email" name="email" placeholder="Email" style="color: rgb(53, 53, 161);"/>
+    <mat-error *ngIf="email.errors?.['required'] && (email.dirty || email.touched)">
+    Email is required.
+     </mat-error>
+     <mat-error *ngIf="email.errors?.['email']">Email is invalid. </mat-error>
+ </mat-form-field>
+
+
+<div class="mb">
+   <mat-form-field appearance="outline" >
+     <mat-label >Select Gender</mat-label>
+     <mat-select ngModel #gender="ngModel"  name="gender" required
+     panelClass="blue" >
+       <mat-option  value="female" >Female</mat-option>
+       <mat-option value="male" >Male</mat-option>
+     </mat-select>
+     <mat-error *ngIf="gender.errors?.['required'] && (gender.dirty || gender.touched)">
+       Gender is required.
+       </mat-error>
+   </mat-form-field>
+  </div>
+  <div class="mb">
+   <mat-form-field appearance="outline" >
+     <mat-label>Select Status</mat-label>
+     <mat-select ngModel #status="ngModel"    name="status" required panelClass="blue">
+       <mat-option value="active" >Active</mat-option>
+       <mat-option value="inactive">Inactive</mat-option>
+
+     </mat-select>
+     <mat-error *ngIf="status.errors?.['required'] && (status.dirty || status.touched)">
+       Status is required.
+       </mat-error>
+   </mat-form-field>
+  </div>
+  <div >
+   <button mat-raised-button extended color="primary" type="submit" [disabled]="!registerForm.valid"
+    >Create</button>
+
+  </div>
+ </div>
+  </form>

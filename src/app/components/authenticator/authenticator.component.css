@@ -1,0 +1,25 @@
+.authenticator{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:1em;
+box-sizing: border-box;
+
+}
+.authenticator-content{
+width: 100%;
+max-width: 30em;
+padding:1.5em;
+color:   #3535a1;
+
+}
+button{
+ margin: .5em;
+}
+.w-100{
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+.card-title{
+  margin-bottom: 1em;
+}

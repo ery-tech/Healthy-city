@@ -1,0 +1,27 @@
+<div class="authenticator">
+  <mat-card class="authenticator-content">
+
+ <mat-card-header class="card-title">
+  <mat-card-title >Login</mat-card-title>
+ </mat-card-header>
+
+ <form #loginForm="ngForm" (ngSubmit)="login(loginForm)" >
+ <div >
+  <mat-form-field class="w-100"  appearance="outline">
+    <mat-label>Access token</mat-label>
+  <input  matInput placeholder="Access token" ngModel #accessToken="ngModel" type="password"
+  name="accessToken" required style=" color:   #3535a1;
+  "/>
+</mat-form-field>
+ <p>Don't have an account? <a href="https://gorest.co.in/" target="_blank">Register here.</a></p>
+  <button mat-fab extended type="submit" [disabled]="loginForm.invalid" >Login</button>
+ </div>
+    </form>
+
+
+
+
+
+  </mat-card>
+</div>
+

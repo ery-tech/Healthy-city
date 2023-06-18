@@ -1,0 +1,64 @@
+
+<form #registerForm="ngForm" (ngSubmit)="createComment(registerForm)" >
+  <div class="register-form container-fluid" style="color: rgb(53, 53, 161);" >
+
+  <h4 >Add a comment</h4>
+  <p>Make sure to copy the post id from the user's profile and paste it here.</p>
+  <mat-form-field class="w-100" appearance="outline" >
+    <mat-label>Id</mat-label>
+  <input  matInput ngModel #Id="ngModel"  type="text"
+  name="Id" placeholder="Id" required style="color: rgb(53, 53, 161);" />
+  <mat-error *ngIf="Id.errors?.['required'] && (Id.dirty || Id.touched)">
+    Id is required.
+    </mat-error>
+  </mat-form-field>
+  <p>Provide your name and email. If you don't have an account, <a  routerLink="/profiles"
+    routerLinkActive="active">create one</a>.</p>
+ <mat-form-field class="w-100" appearance="outline" >
+   <mat-label>Name</mat-label>
+ <input  matInput ngModel #name="ngModel"  type="text"
+ name="name" placeholder="name" required style="color: rgb(53, 53, 161);" />
+ <mat-error *ngIf="name.errors?.['required'] && (name.dirty || name.touched)">
+   Name is required.
+   </mat-error>
+ </mat-form-field>
+
+
+<mat-form-field class="w-100" appearance="outline" >
+  <mat-label>Email</mat-label>
+<input  matInput ngModel #email="ngModel"  type="email"
+name="email" placeholder="email" required style="color: rgb(53, 53, 161);" />
+<mat-error *ngIf="email.errors?.['required'] && (email.dirty || email.touched)">
+  Email is required.
+  </mat-error>
+</mat-form-field>
+
+ <mat-form-field class="w-100" appearance="outline">
+   <mat-label>Text</mat-label>
+  <textarea matInput ngModel #body="ngModel"  required
+
+    type="text" name="body" placeholder="Text" style="color: rgb(53, 53, 161);">
+  </textarea>
+    <mat-error *ngIf="body.errors?.['required'] && (body.dirty || body.touched)">
+    Text is required.
+     </mat-error>
+
+ </mat-form-field>
+
+
+
+
+  <div >
+   <button mat-raised-button extended color="primary" type="submit" disabled="!registerForm.valid"
+    >Create</button>
+
+  </div>
+  </div>
+  </form>
+
+
+
+
+
+
+

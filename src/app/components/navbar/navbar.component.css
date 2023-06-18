@@ -1,0 +1,68 @@
+#navbar{
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+ background: rgb(246, 216, 127);
+  background:
+  linear-gradient(0deg, rgba(249, 220, 146, 0.992) 0%, #f8baa1 60%);
+
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text,
+.navbar-custom .nav-link {
+  color:#3535a1 ;
+  font-weight: 500;
+
+}
+.navbar-content{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+}
+.navbar-left, .navbar-right{
+display: flex;
+align-items: center;
+padding: 0 2em;
+  height: 100%;
+
+}
+.navbar-right{
+  justify-content: flex-end ;
+  margin-right: 3em;
+
+
+}
+.navbar-items{
+  display: inline-block;
+  font-size: 1em;
+  cursor: pointer;
+  font-weight: 400;
+  margin-left: 5em;
+}
+.navbar-items a {
+  text-decoration: none;
+  color: white;
+}
+
+
+.show-nav:focus~.collapsible {
+height: 30vh;
+width: 100%;
+background: rgb(255, 230, 156);
+opacity: 0.96;
+background:
+linear-gradient(to top, rgba(253, 207, 149, 0.992) ,rgb(251, 224, 144)  );
+text-align: right;
+z-index: 20;
+padding-right: 1em;
+margin: 0;
+position: absolute;
+right: 0;
+left: 0;
+top:60px;
+border-bottom-left-radius: 5px ;
+border-bottom-right-radius: 5px;
+}

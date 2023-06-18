@@ -1,0 +1,65 @@
+<div class="main">
+
+  <div class="search-div-container container-fluid"  >
+    <div class="search-div container-fluid" >
+      <input type="text" class="search" matInput placeholder="Search by name..."
+      (input)="searchUser(searchValue)"
+     name= "search" [(ngModel)]="searchValue" >
+    <div class="add-user"> <button class="add-btn" (click)="onAddClick()"
+      >
+      <img src="../../../assets/add-user.png" style="width: 35px;" ></button ></div>
+    </div>
+
+    </div>
+
+
+    <div class="container-fluid card-container ">
+    <div class="row    ">
+
+  <div class=" col my-5 card-row col-md-6 col-lg-4 mx-auto "
+  *ngFor="let user of usersList" >
+    <mat-card  class="card " >
+      <mat-card-header>
+        <div mat-card-avatar class="card-avatar-img"></div>
+
+        <mat-card-title-group>
+          <mat-card-title class="card-title" >
+             {{user.name}}
+
+           </mat-card-title>
+           <div>
+            <button type="button" class="delete-btn" (click)="deleteUser(user.id)"> <span id="boot-icon" class="bi bi-trash-fill"
+              style="font-size: 19px; color: rgb(6, 6, 138); opacity: 1;"></span></button>
+            </div>
+           <mat-card-subtitle style="color: rgb(53, 53, 161);">
+           Id: {{user.id}}
+           </mat-card-subtitle>
+      </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content >
+      <p class="email "> <span class="card-status"> <mat-icon
+        [ngStyle]="{'color': user.status == 'inactive' ? 'red': 'green'}">
+        laptop_windows </mat-icon></span>  {{user.email}}</p>
+        </mat-card-content>
+      <mat-card-actions class="btn-container">
+        <button mat-raised-button color="accent"  class="mini-btn" id="primary-btn" >
+          <a routerLink="/profile/{{user.id}}" >See more</a></button>
+
+
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+
+    </div >
+
+
+    </div>
+    <app-pagination [currentPage]="currentPage"
+    (changePage)="changePage($event)" >
+
+   </app-pagination>
+</div>
+
+
+

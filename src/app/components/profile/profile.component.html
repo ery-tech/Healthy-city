@@ -1,0 +1,144 @@
+<div class="body">
+
+  <div class="container-fluid">
+    <div class="row justify-content-center mx-2">
+        <div class="col-md-4">
+           <div class="card user-card container-fluid">
+                <div class="card-header">
+                    <h5>Profile</h5>
+                </div>
+               <div class="card-block">
+
+                    <div class="user-image"
+                      *ngIf="user.gender == 'female' ; else maleImg ">
+                        <img src="../../../assets/female.jpg" class="img-radius"
+                        alt="User-Profile-Image">
+                   </div>
+
+
+                  <ng-template #maleImg>
+                   <div class="user-image" >
+                    <img src="../../../assets/male.jpg" class="img-radius"
+                    alt="User-Profile-Image">
+                    </div>
+                  </ng-template>
+
+                    <h6 class="smaller f-w-600 m-t-25 m-b-10 ">{{user.name}}</h6>
+                    <p class="text-muted small-size medium-size">{{user.status}} | {{user.gender}} | {{user.email}}</p>
+                    <hr>
+                  <div *ngIf="user.status == 'active'; else inactive ">
+                    <p  class="text-muted m-t-15 small-size medium-size">
+                      Activity Level: 80%</p>
+                    <ul class="list-unstyled activity-leval">
+                        <li class="active"></li>
+                        <li class="active"></li>
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                  </div>
+                   <ng-template #inactive>
+                    <p  class="text-muted m-t-15 small-size medium-size">
+                      Activity Level: 20%</p>
+                    <ul class="list-unstyled activity-leval">
+                        <li class="active"></li>
+                        <li ></li>
+                        <li ></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                  </ng-template>
+
+                    <div class="bg-c-blue counter-block m-t-10   ">
+                        <div class="row blue-row padding-lr">
+                            <div class="col-4 ">
+                           <button  class="btn bg-transparent" (click)="fetchPosts()" >  <i class="bi bi-chat-dots-fill"></i></button>
+                               <p>Posts & Comments</p>
+                            </div>
+                            <div class="col-4">
+                              <button  class="btn bg-transparent">   <i class="bi bi-tree-fill"></i></button>
+                              <p>Sustainability goals</p>
+                            </div>
+                            <div class="col-4">
+                              <button  class="btn bg-transparent"> <i class="bi bi-rocket-fill"></i></button>
+                               <p>Contributions to cultural heritage</p>
+                            </div>
+                        </div>
+                    </div>
+                    <ng-template #Todos>
+                    <div class="container-fluid " *ngFor="let todo of todos" >
+                      <p class="m-t-15 small-size medium-size"> Todos: {{todo.title}}</p>
+                    <span class="m-t-15 text-muted small-size medium-size" >
+                        {{todo.status}}
+                      </span>
+                      <hr>
+                  </div>
+                </ng-template>
+
+                  <div class="container-fluid"  *ngIf="todos == ''; else Todos"  >
+                    <h5 class="m-t-15 text-muted small-size medium-size">No todos yet</h5>
+
+                    <hr>
+                </div>
+
+                  <div class="card comments-card  " *ngIf="posts">
+                    <div class="card-header">
+                        <h6 class="f-w-600 small-size ">Posts</h6>
+                    </div>
+                 <div class="container-fluid  "
+                 *ngFor="let post of posts">
+
+                  <mat-card class="comments-card m-b-15">
+                   <div class="user-img-container m-t-10">
+                   <img class="user-img" src="../../../assets/user.png"
+                   alt="avatar" width="25"
+                    height="25" />  </div>
+                   <mat-card-title class="mx-1 small-size medium-size line-height" >
+
+                   {{post.title}}</mat-card-title>
+                   <mat-card-subtitle class="f-w-600">
+                  <ng-container *ngIf="posts!= ''">
+                     {{post.id}}</ng-container>
+                   </mat-card-subtitle>
+                   <mat-card-content>
+
+                  <p class="posts-div m-b-10 mt-1 small-size medium-size">
+                   {{post.body}} </p>
+                  </mat-card-content>
+                  <mat-card-actions class="justify-content-center">
+                  <button mat-flat-button *ngIf="!checkComments()" class="comments-btn small-size medium-size" (click)="fetchComments(post.id)">See comments</button>
+                   <button mat-flat-button *ngIf="checkComments()"  class="comments-btn small-size medium-size" (click)="fetchComments(post.id)" > Reload comments    </button>
+                  <hr>
+                  </mat-card-actions>
+
+                <div class="container-fluid " *ngFor="let comment of comments" >
+                  <div    *ngIf="comment.post_id == post.id">
+
+                    <hr>
+                    <button class="btn bg-transparent " id="add-btn" (click)="openAddComments()">
+                      <img src="../../../assets/add-message.png" width="30px"></button>
+                    <h5 class="small-size medium-size">{{comment.name}}</h5>
+                    <p class="small-size medium-size">{{comment.body}}</p>
+                  </div>
+
+                  </div>
+                  </mat-card>
+
+
+
+
+              </div>
+
+
+                </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+</div>
