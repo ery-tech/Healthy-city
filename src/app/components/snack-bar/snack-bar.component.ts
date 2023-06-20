@@ -1,10 +1,12 @@
+import { state } from '@angular/animations';
 import { Component } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-snack-bar',
   templateUrl: './snack-bar.component.html',
-  styleUrls: ['./snack-bar.component.css']
+  styleUrls: ['./snack-bar.component.css'],
+  animations: [state]
 })
 export class SnackBarComponent {
 

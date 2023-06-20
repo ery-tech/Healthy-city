@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import {MatButtonModule} from '@angular/material/button';
@@ -53,7 +53,7 @@ import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
+
     MatButtonModule,
     MatIconModule,
     MatBottomSheetModule,
@@ -70,6 +70,7 @@ import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
     MatListModule,
     MatSnackBarModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
