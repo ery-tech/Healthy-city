@@ -20,7 +20,7 @@
     padding-top: 1.5rem;
   }
 .content-description h1, p {
-  font-size: smaller!important;
+  font-size: 15px;
 }
 .content-description p{
   font-weight: 500;
@@ -33,16 +33,16 @@
 }
 @media only screen and (min-width: 426px) and (max-width: 769px){
   .content-description{
-    padding-top: 3rem;
+    padding-top: 1.5rem;
   }
 .content-description h1, p {
-  font-size: medium!important;
+  font-size: 18px;
   font-weight: 700;
 }
 .content-description p{
   font-weight: 500;
-  margin-left: 1.5em;
-  margin-right: 1.5em;
+  margin-left: 3em;
+  margin-right: 3em;
 }
 }
 @media only screen and (min-width: 769px) and (max-width: 1024px){
