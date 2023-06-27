@@ -140,3 +140,24 @@
   }
 
 }
+
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+  .card-container .card{
+    font-size: medium;
+  }
+  .card-title{
+    font-size:medium;
+  }
+
+
+}
+@media only screen and (min-width: 1025px) {
+  .card-container .card{
+    font-size: medium;
+  }
+  .card-title{
+    font-size:large;
+  }
+
+
+}
