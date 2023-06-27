@@ -2,7 +2,7 @@
 
 .content-description{
   color: rgb(53, 53, 161);
-  padding-top: 2rem;
+  padding-top: 1.5rem;
 
   text-align: center;
   width: 100%;
@@ -62,10 +62,14 @@
     margin-right: 2.5em;
   }
 }
-@media only screen and (min-width: 1025px) and (max-width: 1442px){
+@media only screen and (min-width: 1025px) and (max-width: 1900px){
   .content-description{
     padding-top: 1rem;
     margin-top: 0.5rem;
+  }
+  .content-description h1{
+    font-size: 26px!important;
+    font-weight: bolder!important;
   }
   .content-description p{
     font-weight: 600;}
